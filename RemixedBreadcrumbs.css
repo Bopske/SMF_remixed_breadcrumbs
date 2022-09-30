@@ -1,0 +1,146 @@
+:root {
+  --breadcrumb_color_1: rgb(85, 126, 160); /* Main Color 1 */
+  --breadcrumb_color_2: rgb(226, 233, 243); /* Main Color 2 */
+  --breadcrumb_bg: rgb(255, 255, 255); /* The middle of the arrow, this needs to be the same color as the background*/
+  --breadcrumb_border_color: rgb(221,211,211); /* BreadCrumb Border Color */
+}
+/*The Breadcrumb*/
+/*Main class gives border, font size, and turns off list style*/
+.navigate_section {
+	padding: 0;
+	float: left;
+	width: 100%;
+	list-style: none;
+	border: 1px solid var(--breadcrumb_border_color);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#main_content_section .navigate_section {
+	margin: 0;
+	padding: 0;
+}
+/*Flex it up */
+.navigate_section ul {
+	margin: 0;
+	padding: 0;
+	font-size: 0.9em;
+	overflow: hidden;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	background: var(--breadcrumb_bg);
+	background-image: none;
+}
+/*We don't want the p tag to have a margin*/
+.navigate_section p {
+	margin: 0;
+}
+.navigate_section ul li span {
+	margin-top: 0;
+}
+/* Fall in line li */
+.navigate_section ul li {
+	display: inline-flex;
+}
+/* Don't need these */
+.navigate_section ul li .dividers {
+	display: none;
+}
+/*Forming the arrows*/
+.navigate_section ul li {
+	background-color: var(--breadcrumb_color_1);
+	box-sizing: border-box;
+	color: var(--breadcrumb_color_2);
+	display: inline-flex;
+	max-height: 2em;
+	padding: .5em 1em .5em 1.5em;
+	position: relative;
+	text-decoration: none;
+	text-shadow: none;
+	transition-timing-function: ease-in;
+	transition: 0.5s;
+	font-weight: 700;
+	line-height: 1.1em;
+	float: none;
+}
+.navigate_section ul li:first-child  {
+	padding-left: 1em;
+}
+.navigate_section ul li:before {
+	border-top: 1em solid transparent;
+	border-bottom: 1em solid transparent;
+	border-left: 1em solid var(--breadcrumb_bg);
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -1.25em;
+	z-index: 1;
+}
+.navigate_section ul li:after {
+	border-top: 1em solid transparent;
+	border-bottom: 1em solid transparent;
+	border-left: 1em solid var(--breadcrumb_color_1);
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -0.9em;
+	transition-timing-function: ease-in;
+	transition: 0.5s;
+	z-index: 1;
+}
+/* Colors */
+.navigate_section strong {
+	color: var(--breadcrumb_color_1);
+}
+.navigate_section ul li a {
+	color: var(--breadcrumb_color_2);
+}
+.navigate_section ul li a:hover {
+	color: var(--breadcrumb_color_1);
+}
+.navigate_section ul li:hover a {
+	color: var(--breadcrumb_color_1);
+}
+.navigate_section ul li:hover {
+	background-color: var(--breadcrumb_color_2);
+	color: var(--breadcrumb_color_1);
+}
+.navigate_section ul li:hover:after {
+	border-left-color: var(--breadcrumb_color_2);
+	color: var(--breadcrumb_color_1);
+}
+.navigate_section ul li:last-child  {
+	background-color: var(--breadcrumb_color_2);
+	color: var(--breadcrumb_color_1);
+}
+.navigate_section ul li:last-child a  {
+	color: var(--breadcrumb_color_1);
+}
+.navigate_section ul li:last-child::before {
+	display: none;
+}
+.navigate_section ul li:last-child::after {
+	border: 1px solid transparent;
+	display: none;
+}
+
+/* Lets Make This Look Better For Mobile */
+@media screen and (max-width: 480px) {
+.navigate_section {
+	border: none;
+	display: block;
+}
+.navigate_section ul {
+	display: block;
+}
+.navigate_section ul li {
+	display: block;
+	width: max-content;
+	margin: 0 0 .2em 0;
+	padding-left: 1em;
+}
+.navigate_section ul li:last-child  {
+	margin-bottom: 0;
+}
+}

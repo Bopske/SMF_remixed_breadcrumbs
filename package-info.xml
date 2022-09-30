@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>@rjen:RemixedBreadcrumbs</id>
+	<name>Remixed Breadcrumbs</name>
+	<version>2.0</version>
+	<type>modification</type>
+	
+	<install for="2.1.* - 2.1.99">
+		<redirect url="">Installed!</redirect>
+		<code>doHooks.php</code>
+		<require-file name="RemixedBreadcrumbs.php" destination="$sourcedir" />
+		<require-file name="RemixedBreadcrumbs.css" destination="$themedir/css" />
+	</install>
+
+	<uninstall for="2.1.* - 2.1.99">
+		<code>doHooks.php</code>
+		<remove-file name="$sourcedir/RemixedBreadcrumbs.php" />
+		<remove-file name="$themedir/css/RemixedBreadcrumbs.css" />
+	</uninstall>
+	
+</package-info>
