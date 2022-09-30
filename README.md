@@ -1,5 +1,9 @@
 ## Remixed Breadcrumbs
 
+[![Latest Version](https://img.shields.io/github/release/Bopske/SMF_remixed_breadcrumbs.svg)](https://github.com/Bopske/SMF_remixed_breadcrumbs/releases)
+[![Total Downloads](https://img.shields.io/github/downloads/Bopske/SMF_remixed_breadcrumbs/total.svg)](https://github.com/Bopske/SMF_remixed_breadcrumbs/downloads)
+[![GitHub issues](https://img.shields.io/github/issues/Bopske/SMF_remixed_breadcrumbs.svg)](https://github.com/Bopske/SMF_remixed_breadcrumbs/issues)
+
 A modification for Simple Machines Forum 2.1 that changes the layout of the Breadcrumbs (linktree) in Curve2 to a fancier display.
 
 This modification is created from the "Remixed Breadcrumbs" Tips&Tricks topic: https://www.simplemachines.org/community/index.php?topic=580159.0 by TwitchisMental
